@@ -3,7 +3,7 @@
     The intention is to provide a list of german cities and their geolocation by using
     two sources:
         a. Some 3° Part service
-        b. Local storage created based on the list of cities avaliable bei Destatis Statistisches Bundesamt 
+        b. Local storage created based on the list of cities avaliable by Destatis Statistisches Bundesamt 
 
 Obs: This application is part of my self learning about koltin, so it has no commercial intention
 
