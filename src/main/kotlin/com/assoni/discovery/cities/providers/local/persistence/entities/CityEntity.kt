@@ -14,4 +14,9 @@ class CityEntity(
     var location: GeoLocation
 ) {
     constructor(name: String, location: GeoLocation) : this(null, name, location)
+
+    fun save(postprocessing:(entity: CityEntity) -> CityEntity) : CityEntity {
+        //Do some common foo operation
+        return postprocessing(this)
+    }
 }

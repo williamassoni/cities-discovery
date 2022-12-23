@@ -47,8 +47,10 @@ class ImportCityService(private val cityRepository: CityRepository) : Applicatio
 
             var savedEntity =
             notNullNorEmpty(lat, long) { lat, long ->
-                var location = GeoLocation(convertValueToDouble(lat), convertValueToDouble(long))
-                cityRepository.save(CityEntity(cityName, location))
+                val location = GeoLocation(convertValueToDouble(lat), convertValueToDouble(long))
+                val entity = CityEntity(cityName, location)
+
+                entity.save{ cityRepository.save(it)  }
             }
 
             savedEntity?.let {
